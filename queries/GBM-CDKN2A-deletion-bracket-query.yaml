@@ -22,8 +22,11 @@ description: |-
   * support of bracket requests (a Beacon v2 requirement)
   * aggregation over entry types
 
-entryTypeAggregation: true
+# ============================================================================ #
 
+entryTypeAggregation: true
+beaconVersions:
+  - v2
 POSTrequest:
   filters:
     - NCIT:C3058
@@ -37,6 +40,5 @@ POSTrequest:
       - 21967753
       - 23000000
     variantType: EFO:0020073
-
 GETrequest: ?filters=NCIT:C3058&assemblyId=GRCh38&referenceName=chr9&start=21000001,21975098&end=21967753,23000000&variantType=EFO:0020073
 
