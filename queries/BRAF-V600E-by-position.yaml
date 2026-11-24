@@ -1,0 +1,28 @@
+name: BRAF V600E variant queried by position
+description: |-
+  ### BRAF V600E sequence variant
+
+  #### Solution through querying by position and change
+
+  This is a pure sequence variation request corresponding to the main alteration
+  for the BRAF V600E variant. The Gnomad string would be `chr7-140753336-A-T`.
+
+  #### Requirements and considerations
+
+  * here `assemblyId` and `referenceName` are used but a versioned refseq
+    reference would be recommended
+  * There is no need for a `referenceBases` value.
+
+entryTypeAggregation: false
+
+POSTrequest:
+  requestParameters:
+    assemblyId: GRCh38
+    referenceName: chr7
+    start:
+      - 140753335
+    referenceBases: A
+    alternateBases: T
+
+GETrequest: ?assemblyId=GRCh38&referenceName=chr7&start=140753335&referenceBases=A&alternateBases=T
+
